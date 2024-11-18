@@ -1,0 +1,325 @@
+2024-10-25 03:42:39,889 - INFO - setting up API-client for environment practice
+2024-10-25 03:42:39,890 - INFO - Starting server on port 8080
+2024-10-25 03:42:39,909 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.196.35:8080
+2024-10-25 03:42:39,909 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-25 03:42:39,909 - INFO -  * Restarting with stat
+2024-10-25 03:42:40,104 - INFO - setting up API-client for environment practice
+2024-10-25 03:42:40,105 - INFO - Starting server on port 8080
+2024-10-25 03:42:40,119 - WARNING -  * Debugger is active!
+2024-10-25 03:42:40,119 - INFO -  * Debugger PIN: 100-015-784
+2024-10-25 03:42:40,351 - INFO - 172.31.196.35 - - [25/Oct/2024 03:42:40] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-25 03:42:52,559 - INFO -  * Detected change in '/home/runner/OandaTradingBot/webhookTest.py', reloading
+2024-10-25 03:42:52,587 - INFO -  * Restarting with stat
+2024-10-25 03:42:52,788 - INFO - setting up API-client for environment practice
+2024-10-25 03:42:52,789 - INFO - Starting server on port 8080
+2024-10-25 03:42:52,801 - WARNING -  * Debugger is active!
+2024-10-25 03:42:52,801 - INFO -  * Debugger PIN: 464-580-394
+2024-10-25 03:42:55,962 - INFO -  * Detected change in '/home/runner/OandaTradingBot/webhookTest.py', reloading
+2024-10-25 03:42:55,990 - INFO -  * Restarting with stat
+2024-10-25 03:42:56,190 - INFO - setting up API-client for environment practice
+2024-10-25 03:42:56,191 - INFO - Starting server on port 8080
+2024-10-25 03:42:56,203 - WARNING -  * Debugger is active!
+2024-10-25 03:42:56,204 - INFO -  * Debugger PIN: 935-644-733
+2024-10-25 03:44:25,434 - INFO - 172.31.196.35 - - [25/Oct/2024 03:44:25] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-25 03:46:58,998 - INFO - 172.31.196.35 - - [25/Oct/2024 03:46:58] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-25 03:47:25,522 - INFO -  * Detected change in '/home/runner/OandaTradingBot/webhookTest.py', reloading
+2024-10-25 03:47:25,548 - INFO -  * Restarting with stat
+2024-10-25 03:47:25,751 - INFO - setting up API-client for environment practice
+2024-10-25 03:47:25,752 - INFO - Starting server on port 8080
+2024-10-25 03:47:25,766 - WARNING -  * Debugger is active!
+2024-10-25 03:47:25,766 - INFO -  * Debugger PIN: 606-713-113
+2024-10-25 03:48:05,747 - INFO - Received webhook data: {
+  "strategy": "MA_Cross",
+  "action": "buy",
+  "symbol": "EUR_USD",
+  "units": 100,
+  "price": 1.1,
+  "stop_loss": 1.099,
+  "take_profit": 1.102
+}
+2024-10-25 03:48:05,747 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/summary
+2024-10-25 03:48:05,964 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/openPositions
+2024-10-25 03:48:06,049 - INFO - Sending order to Oanda: {
+  "order": {
+    "type": "MARKET",
+    "instrument": "EUR_USD",
+    "units": "100",
+    "timeInForce": "FOK",
+    "positionFill": "DEFAULT",
+    "stopLossOnFill": {
+      "price": "1.099",
+      "timeInForce": "GTC"
+    },
+    "takeProfitOnFill": {
+      "price": "1.102",
+      "timeInForce": "GTC"
+    }
+  }
+}
+2024-10-25 03:48:06,049 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/orders
+2024-10-25 03:48:06,119 - INFO - Trade executed: {
+  "orderCreateTransaction": {
+    "id": "8",
+    "accountID": "101-001-28443011-001",
+    "userID": 28443011,
+    "batchID": "8",
+    "requestID": "61298620392842005",
+    "time": "2024-10-25T03:48:06.094687163Z",
+    "type": "MARKET_ORDER",
+    "instrument": "EUR_USD",
+    "units": "100",
+    "timeInForce": "FOK",
+    "positionFill": "DEFAULT",
+    "takeProfitOnFill": {
+      "price": "1.10200",
+      "timeInForce": "GTC"
+    },
+    "stopLossOnFill": {
+      "price": "1.09900",
+      "timeInForce": "GTC",
+      "triggerMode": "TOP_OF_BOOK"
+    },
+    "reason": "CLIENT_ORDER"
+  },
+  "orderCancelTransaction": {
+    "id": "9",
+    "accountID": "101-001-28443011-001",
+    "userID": 28443011,
+    "batchID": "8",
+    "requestID": "61298620392842005",
+    "time": "2024-10-25T03:48:06.094687163Z",
+    "type": "ORDER_CANCEL",
+    "orderID": "8",
+    "reason": "STOP_LOSS_ON_FILL_LOSS"
+  },
+  "relatedTransactionIDs": [
+    "8",
+    "9"
+  ],
+  "lastTransactionID": "9"
+}
+2024-10-25 03:48:06,120 - INFO - 172.31.196.35 - - [25/Oct/2024 03:48:06] "POST /webhook HTTP/1.1" 200 -
+2024-10-25 03:49:48,235 - INFO -  * Detected change in '/home/runner/OandaTradingBot/webhookTest.py', reloading
+2024-10-25 03:49:48,263 - INFO -  * Restarting with stat
+2024-10-25 03:49:48,466 - INFO - setting up API-client for environment practice
+2024-10-25 03:49:48,467 - INFO - Starting server on port 8080
+2024-10-25 03:49:48,479 - WARNING -  * Debugger is active!
+2024-10-25 03:49:48,480 - INFO -  * Debugger PIN: 164-157-251
+2024-10-25 03:49:52,671 - INFO -  * Detected change in '/home/runner/OandaTradingBot/webhookTest.py', reloading
+2024-10-25 03:49:52,700 - INFO -  * Restarting with stat
+2024-10-25 03:49:52,897 - INFO - setting up API-client for environment practice
+2024-10-25 03:49:52,898 - INFO - Starting server on port 8080
+2024-10-25 03:49:52,911 - WARNING -  * Debugger is active!
+2024-10-25 03:49:52,911 - INFO -  * Debugger PIN: 131-017-158
+2024-10-25 03:50:21,119 - INFO - Received webhook data: {
+  "strategy": "MA_Cross",
+  "action": "buy",
+  "symbol": "EUR_USD",
+  "units": 100,
+  "price": 1.08,
+  "stop_loss": 1.075,
+  "take_profit": 1.085,
+  "timestamp": "2024-10-25T03:50:20.989635"
+}
+2024-10-25 03:50:21,119 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/summary
+2024-10-25 03:50:21,265 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/openPositions
+2024-10-25 03:50:21,333 - INFO - Sending order to Oanda: {
+  "order": {
+    "type": "MARKET",
+    "instrument": "EUR_USD",
+    "units": "100",
+    "timeInForce": "FOK",
+    "positionFill": "DEFAULT",
+    "stopLossOnFill": {
+      "price": "1.075",
+      "timeInForce": "GTC"
+    },
+    "takeProfitOnFill": {
+      "price": "1.085",
+      "timeInForce": "GTC"
+    }
+  }
+}
+2024-10-25 03:50:21,333 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/orders
+2024-10-25 03:50:21,400 - INFO - Trade executed: {
+  "orderCreateTransaction": {
+    "id": "10",
+    "accountID": "101-001-28443011-001",
+    "userID": 28443011,
+    "batchID": "10",
+    "requestID": "61298620959165769",
+    "time": "2024-10-25T03:50:21.373424359Z",
+    "type": "MARKET_ORDER",
+    "instrument": "EUR_USD",
+    "units": "100",
+    "timeInForce": "FOK",
+    "positionFill": "DEFAULT",
+    "takeProfitOnFill": {
+      "price": "1.08500",
+      "timeInForce": "GTC"
+    },
+    "stopLossOnFill": {
+      "price": "1.07500",
+      "timeInForce": "GTC",
+      "triggerMode": "TOP_OF_BOOK"
+    },
+    "reason": "CLIENT_ORDER"
+  },
+  "orderFillTransaction": {
+    "id": "11",
+    "accountID": "101-001-28443011-001",
+    "userID": 28443011,
+    "batchID": "10",
+    "requestID": "61298620959165769",
+    "time": "2024-10-25T03:50:21.373424359Z",
+    "type": "ORDER_FILL",
+    "orderID": "10",
+    "instrument": "EUR_USD",
+    "units": "100",
+    "requestedUnits": "100",
+    "price": "1.08215",
+    "pl": "0.0000",
+    "quotePL": "0",
+    "financing": "0.0000",
+    "baseFinancing": "0",
+    "commission": "0.0000",
+    "accountBalance": "99999.9870",
+    "gainQuoteHomeConversionFactor": "1",
+    "lossQuoteHomeConversionFactor": "1",
+    "guaranteedExecutionFee": "0.0000",
+    "quoteGuaranteedExecutionFee": "0",
+    "halfSpreadCost": "0.0085",
+    "fullVWAP": "1.08215",
+    "reason": "MARKET_ORDER",
+    "tradeOpened": {
+      "price": "1.08215",
+      "tradeID": "11",
+      "units": "100",
+      "guaranteedExecutionFee": "0.0000",
+      "quoteGuaranteedExecutionFee": "0",
+      "halfSpreadCost": "0.0085",
+      "initialMarginRequired": "2.1641"
+    },
+    "fullPrice": {
+      "closeoutBid": "1.08189",
+      "closeoutAsk": "1.08224",
+      "timestamp": "2024-10-25T03:50:21.117025738Z",
+      "bids": [
+        {
+          "price": "1.08198",
+          "liquidity": "500000"
+        },
+        {
+          "price": "1.08197",
+          "liquidity": "2500000"
+        },
+        {
+          "price": "1.08196",
+          "liquidity": "2000000"
+        },
+        {
+          "price": "1.08195",
+          "liquidity": "5000000"
+        },
+        {
+          "price": "1.08192",
+          "liquidity": "10000000"
+        },
+        {
+          "price": "1.08189",
+          "liquidity": "10000000"
+        }
+      ],
+      "asks": [
+        {
+          "price": "1.08215",
+          "liquidity": "500000"
+        },
+        {
+          "price": "1.08216",
+          "liquidity": "500000"
+        },
+        {
+          "price": "1.08217",
+          "liquidity": "2000000"
+        },
+        {
+          "price": "1.08218",
+          "liquidity": "2000000"
+        },
+        {
+          "price": "1.08219",
+          "liquidity": "5000000"
+        },
+        {
+          "price": "1.08221",
+          "liquidity": "10000000"
+        },
+        {
+          "price": "1.08224",
+          "liquidity": "10000000"
+        }
+      ]
+    },
+    "homeConversionFactors": {
+      "gainQuoteHome": {
+        "factor": "1"
+      },
+      "lossQuoteHome": {
+        "factor": "1"
+      },
+      "gainBaseHome": {
+        "factor": "1.07664970"
+      },
+      "lossBaseHome": {
+        "factor": "1.08747030"
+      }
+    }
+  },
+  "relatedTransactionIDs": [
+    "10",
+    "11",
+    "12",
+    "13"
+  ],
+  "lastTransactionID": "13"
+}
+2024-10-25 03:50:21,401 - INFO - 172.31.196.35 - - [25/Oct/2024 03:50:21] "POST /webhook HTTP/1.1" 200 -
+2024-10-25 03:53:27,485 - INFO -  * Detected change in '/home/runner/OandaTradingBot/main.py', reloading
+2024-10-25 03:53:27,513 - INFO -  * Restarting with stat
+2024-10-25 21:41:14,944 - INFO - setting up API-client for environment practice
+2024-10-25 21:41:14,946 - INFO - Starting server on port 8080
+2024-10-25 21:41:14,965 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.196.77:8080
+2024-10-25 21:41:14,965 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-25 21:41:14,965 - INFO -  * Restarting with stat
+2024-10-25 21:41:15,194 - INFO - setting up API-client for environment practice
+2024-10-25 21:41:15,195 - INFO - Starting server on port 8080
+2024-10-25 21:41:15,210 - WARNING -  * Debugger is active!
+2024-10-25 21:41:15,211 - INFO -  * Debugger PIN: 101-045-622
+2024-10-25 21:41:15,433 - INFO - 172.31.196.77 - - [25/Oct/2024 21:41:15] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-25 22:17:00,823 - INFO - setting up API-client for environment practice
+2024-10-25 22:17:00,824 - INFO - Starting server on port 8080
+2024-10-25 22:17:00,847 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://172.31.196.109:8080
+2024-10-25 22:17:00,847 - INFO - [33mPress CTRL+C to quit[0m
+2024-10-25 22:17:00,848 - INFO -  * Restarting with stat
+2024-10-25 22:17:01,082 - INFO - setting up API-client for environment practice
+2024-10-25 22:17:01,083 - INFO - Starting server on port 8080
+2024-10-25 22:17:01,095 - WARNING -  * Debugger is active!
+2024-10-25 22:17:01,096 - INFO -  * Debugger PIN: 938-525-402
+2024-10-25 22:17:01,289 - INFO - 172.31.196.109 - - [25/Oct/2024 22:17:01] "[33mGET / HTTP/1.1[0m" 404 -
+2024-10-25 22:17:12,610 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/summary
+2024-10-25 22:17:12,804 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/101-001-28443011-001/openTrades
+2024-10-25 22:17:12,887 - INFO - 172.31.196.109 - - [25/Oct/2024 22:17:12] "GET /monitor HTTP/1.1" 200 -
+2024-10-25 22:17:30,861 - ERROR - Error processing webhook: name 'data' is not defined
+2024-10-25 22:17:30,862 - INFO - 172.31.196.109 - - [25/Oct/2024 22:17:30] "[35m[1mPOST /webhook HTTP/1.1[0m" 500 -
+2024-10-25 22:20:32,734 - INFO -  * Detected change in '/home/runner/OandaTradingBot/main.py', reloading
+2024-10-25 22:20:32,763 - INFO -  * Restarting with stat
