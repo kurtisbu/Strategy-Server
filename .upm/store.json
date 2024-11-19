@@ -1,1 +1,0 @@
-{"version":2,"languages":{"python3-poetry":{"specfileHash":"32497a835dfcb0b24053af79df4472ae","lockfileHash":"e98de7184209f2f69afce87fea43d8c6","guessedImports":["requests","Flask","python-dotenv","binance","pytz"],"guessedImportsHash":"688917facec1e7393329bd89bb1249fb"}}}
