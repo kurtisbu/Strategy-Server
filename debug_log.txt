@@ -37589,3 +37589,38 @@
 2024-11-17 23:10:37,705 - ERROR - Binance error: APIError(code=-2015): Invalid API-key, IP, or permissions for action.
 2024-11-17 23:10:37,723 - INFO - Monitor endpoint accessed
 2024-11-17 23:10:37,724 - INFO - 172.31.196.65 - - [17/Nov/2024 23:10:37] "GET /monitor HTTP/1.1" 200 -
+2024-11-19 16:13:50,967 - INFO - setting up API-client for environment practice
+2024-11-19 16:13:50,968 - DEBUG - Starting new HTTPS connection (1): testnet.binance.vision:443
+2024-11-19 16:13:51,328 - DEBUG - https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/11" 200 2
+2024-11-19 16:13:51,330 - INFO - Starting server on port 8080
+2024-11-19 16:13:51,407 - INFO - [31m[1mWARNING: This is a development server. Do not use it in a production deployment. Use a production WSGI server instead.[0m
+ * Running on all addresses (0.0.0.0)
+ * Running on http://127.0.0.1:8080
+ * Running on http://100.65.203.121:8080
+2024-11-19 16:13:51,407 - INFO - [33mPress CTRL+C to quit[0m
+2024-11-19 16:13:51,411 - INFO -  * Restarting with stat
+2024-11-19 16:13:52,051 - INFO - setting up API-client for environment practice
+2024-11-19 16:13:52,052 - DEBUG - Starting new HTTPS connection (1): testnet.binance.vision:443
+2024-11-19 16:13:52,197 - DEBUG - https://testnet.binance.vision:443 "GET /api/v3/ping HTTP/11" 200 2
+2024-11-19 16:13:52,199 - INFO - Starting server on port 8080
+2024-11-19 16:13:52,212 - WARNING -  * Debugger is active!
+2024-11-19 16:13:52,214 - INFO -  * Debugger PIN: 839-331-588
+2024-11-19 16:14:02,395 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:02] "GET / HTTP/1.1" 200 -
+2024-11-19 16:14:02,432 - ERROR - 100.65.203.121 - - [19/Nov/2024 16:14:02] code 400, message Bad request version ('ÆI¼#\x17\x00¹}C/]\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2024-11-19 16:14:02,432 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:02] "[35m[1m\x16\x03\x01\x07K\x01\x00\x07G\x03\x03¥\x05m9Ü\x19ñ\x8aEn\x97|\x17\x82@\x113Â/ß?º\x83sgôé¹ÄÆì. ÿ\x04qª\x86\x9f\x90\x1a_Ídà÷y¹Êý¿îÍ\x0cÆI¼#\x17\x00¹}C/]\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2024-11-19 16:14:02,433 - ERROR - 100.65.203.121 - - [19/Nov/2024 16:14:02] code 400, message Bad request version ('\x93gÿ»\x1aYrfjev;çx\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À')
+2024-11-19 16:14:02,434 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:02] "[35m[1m\x16\x03\x01\x02z\x01\x00\x02v\x03\x036\x0ekÌÓì\x19¥\x019Þßl±I\x16ôçóÔ\x98¼_?\x19ô\x04û\x11Å¬\x91 \x90\x9e\x09Õ¨\x94­RS\x8cjIµf¯Å¹ \x93gÿ»\x1aYrfjev;çx\x00"\x13\x01\x13\x03\x13\x02À+À/Ì©Ì¨À,À0À[0m" HTTPStatus.BAD_REQUEST -
+2024-11-19 16:14:09,516 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:09] "GET /dashboard HTTP/1.1" 200 -
+2024-11-19 16:14:09,629 - INFO - performing request https://api-fxpractice.oanda.com/v3/accounts/None/summary
+2024-11-19 16:14:09,631 - DEBUG - Starting new HTTPS connection (1): api-fxpractice.oanda.com:443
+2024-11-19 16:14:09,798 - DEBUG - https://api-fxpractice.oanda.com:443 "GET /v3/accounts/None/summary HTTP/11" 400 58
+2024-11-19 16:14:09,798 - ERROR - request https://api-fxpractice.oanda.com/v3/accounts/None/summary failed [400,{"errorMessage":"Invalid value specified for 'accountID'"}]
+2024-11-19 16:14:09,798 - ERROR - Error getting Oanda account summary: {"errorMessage":"Invalid value specified for 'accountID'"}
+2024-11-19 16:14:09,799 - ERROR - Oanda error: {"errorMessage":"Invalid value specified for 'accountID'"}
+2024-11-19 16:14:09,799 - ERROR - Error getting Binance account summary: API Secret required for private endpoints
+2024-11-19 16:14:09,799 - ERROR - Binance error: API Secret required for private endpoints
+2024-11-19 16:14:09,821 - INFO - Monitor endpoint accessed
+2024-11-19 16:14:09,822 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:09] "GET /monitor HTTP/1.1" 200 -
+2024-11-19 16:14:09,823 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:09] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2024-11-19 16:14:10,952 - INFO - Market status checked: Open
+2024-11-19 16:14:10,952 - INFO - 100.65.203.121 - - [19/Nov/2024 16:14:10] "GET /market-status HTTP/1.1" 200 -
