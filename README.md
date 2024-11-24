@@ -82,6 +82,7 @@ The Strategy Server acts as a bridge between your trading strategies and broker 
 ## Dashboard
 
 The dashboard tracks the current market status and any active trades for either broker that is connected, as well as the Account Summary.
+
 ![Dashboard](Images/Dashboard.png "Strategy Server /Dashboard Endpoint")
 
 ---
