@@ -104,9 +104,7 @@ Contributions are welcome! If you'd like to improve the project, feel free to fo
 - **Dynamic Position Sizing**: Implement adaptive position sizing to enhance strategy flexibility.
 - **Additional Broker Support**: Expand to support more brokers, including [e.g., Binance, others].
 - **Enhanced Dashboard**: Develop a robust dashboard for trade visualization and monitoring.
-- Add support for additional trading platforms.
-- Build out advanced performance monitoring dashboards.
-- Enhance API with more robust error handling and logging.
+- **Enhanced Logging**: Enhance API with more robust error handling and logging.
 
 ---
 
